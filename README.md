@@ -1,12 +1,5 @@
----
-tag: AWS, Event-based, Eventbridge
-Type: Project
-Name: Eventing and Messaging Services Showdown
-Technologies: AWS, Kinesis Data Streams, Kinesis Data Firehose, EventBridge, SQS, Lambda
----
-```toc
-```
-![[04 - Eventing and Messaging Showdown - Page 1.png]]
+# Eventing and M3ssaging Showdown
+![Eventing Architecture](./04%20-%20Eventing%20and%20Messaging%20Showdown%20-%20Page%201.png)
 ## Project Overview
 The purpose of this project is to explore and create the various event streams and messaging queues offered by AWS to simulate a real life event-based architecture, having an input Lambda function publish to the various technologies, which then features data manipulation either by another lambda function or by Data Firehose, and the results then stored in an S3 bucket.
 ### Project Outcome
