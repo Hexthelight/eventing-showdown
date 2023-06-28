@@ -13,18 +13,13 @@ By the end of this project is to gain a basic understanding of how various event
 - Apache Self hosted Kafka
 - Kinesis Video Streams
 
-## Project Description
+## Project Details
+How you configure and choose your eventing and messaging technologies is vital to ensuring you can build a robust, decoupled architecture and, with event-based architecture taking center stage in modern cloud frameworks, being able to understand the various options available and choose accordingly could mean the difference between having an amazing, scalable, cost effective architecture and an admin nightmare.
 
-For all of these one-off projects, everything is encapsulated in a brand new AWS account which is then destroyed upon project completion, I would then access the account in Terraform using the `OrganizationAccountAccessRole` in order to prevent any extra configuration in the AWS CLI.
-
-In this project, I spun up an API Gateway instance that, based on the call received by curl, route the call to a lambda function that would interface with DynamoDB and return the results back to the user.
-
-In order to add a layer of protection to the API, I configured a Cognito user pool to generate a JWT token upon a successful authentication call, which is passed in the header of the API call.
-
-I then have Cloudwatch Logs enabled for debugging purposes.
+So in order to learn the nuances between the various technologies available by AWS, I will be comparing Kinesis Data Streams, Kinesis Data Firehose, SQS, SNS and Eventbridge across a basic scenario which involves a Lambda function that generates a simple JSON object which then subsequently triggers the different technologies which each route the request to a response Lambda function that parses the event / message payload and store the results in an S3 bucket.
 
 ### Pricing
-This project did not cost me anything to create and test as all my usage fell under the free tier and was not intensive enough to breach any thresholds.
+This project cost $0.05 as most items fell under the free tier due to my low usage requirements.
 
 ## Learning from the Project
 
