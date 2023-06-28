@@ -1,4 +1,4 @@
-# Eventing and M3ssaging Showdown
+# Eventing and Messaging Showdown
 ![Eventing Architecture](./04%20-%20Eventing%20and%20Messaging%20Showdown%20-%20Page%201.png)
 ## Project Overview
 The purpose of this project is to explore and create the various event streams and messaging queues offered by AWS to simulate a real life event-based architecture, having an input Lambda function publish to the various technologies, which then features data manipulation either by another lambda function or by Data Firehose, and the results then stored in an S3 bucket.
@@ -63,12 +63,3 @@ The built-in blueprint however is really useful and I used that pretty much unto
 When I first learned of event-based architectures and event backbones my first assumption was that this was a methodology that would have been serviced by Kinesis, by its ability to stream data at massive scale, this was driven by my inexperience with Kinesis Data Shards which I believed were routing tunnels, rather than an ability to provide more throughput.
 
 In the course of my research, I realised how powerful EventBridge is at routing events and messages which can then feed SQS topics, Lambda functions, even Kinesis streams. I originally didn't give EventBridge much credit as my only usage of it in the past was to trigger state changes in ECS based on cron jobs. EventBridge is definitely a service that I want to pay a closer attention to in the future as it has a lot of potential.
-
-## Resources
-- [b] https://medium.com/@zhaoyi0113/how-to-choose-between-eventbridge-and-sqs-in-event-driven-architecture-a9a51efca9c4
-- [b] https://aws.amazon.com/blogs/architecture/a-serverless-solution-for-invoking-aws-lambda-at-a-sub-minute-frequency/
-- [b] https://stackoverflow.com/questions/40741282/cannot-use-requests-module-on-aws-lambda
-- [b] https://api-ninjas.com/api/facts
-- [b] https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis-example.html
-- [b] https://docs.aws.amazon.com/step-functions/latest/dg/getting-started-with-sfn.html
-- [b] https://beabetterdev.com/2021/09/10/aws-sqs-vs-sns-vs-eventbridge/
