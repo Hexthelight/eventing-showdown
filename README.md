@@ -13,9 +13,18 @@ By the end of this project is to gain a basic understanding of how various event
 - Apache Self hosted Kafka
 - Kinesis Video Streams
 
-## Tasks
-- [ ] Fix Factoid and make sure it renders properly
-- [ ] Test nested functions work properly
+## Project Description
+
+For all of these one-off projects, everything is encapsulated in a brand new AWS account which is then destroyed upon project completion, I would then access the account in Terraform using the `OrganizationAccountAccessRole` in order to prevent any extra configuration in the AWS CLI.
+
+In this project, I spun up an API Gateway instance that, based on the call received by curl, route the call to a lambda function that would interface with DynamoDB and return the results back to the user.
+
+In order to add a layer of protection to the API, I configured a Cognito user pool to generate a JWT token upon a successful authentication call, which is passed in the header of the API call.
+
+I then have Cloudwatch Logs enabled for debugging purposes.
+
+### Pricing
+This project did not cost me anything to create and test as all my usage fell under the free tier and was not intensive enough to breach any thresholds.
 
 ## Learning from the Project
 
